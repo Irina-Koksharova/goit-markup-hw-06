@@ -65,7 +65,7 @@
 						<br />
 						для вашего бизнеса
 					</h1>
-					<button class="hero-button">Заказать услугу</button>
+					<button class="hero-button" data-modal-open>Заказать услугу</button>
 				</div>
 			</section>
 
@@ -414,6 +414,62 @@
 			</div>
 		</footer>
 
+		<div class="backdrop is-hidden" data-modal>
+			<form class="backdrop-modal">
+				<button class="backdrop-button-close" data-modal-close>
+					<svg class="backdrop-close" width="11px" height="11px">
+						<use href="./images/symbol-defs.svg#icon-close"></use>
+					</svg>
+				</button>
+
+				<div class="modal-conteiner">
+					<p class="backdrop-text">Оставьте свои данные, мы вам перезвоним</p>
+
+					<div class="backdrop-container">
+						<input type="text" name="name" id="input-name" autocomplete="off" class="backdrop-input" />
+						<label for="input-name" class="backdrop-label">
+							Имя
+						</label>
+						<svg class="backdrop-icon" width="18px" height="18px">
+							<use href="./images/symbol-defs.svg#icon-name"></use>
+						</svg>
+					</div>
+					<div class="backdrop-container">
+						<input type="tel" name="telefone" id="input-tel" autocomplete="off" class="backdrop-input" />
+						<label for="input-tel" class="backdrop-label">
+							Телефон
+						</label>
+						<svg class="backdrop-icon" width="18px" height="18px">
+							<use href="./images/symbol-defs.svg#icon-tel"></use>
+						</svg>
+					</div>
+					<div class="backdrop-container">
+						<input type="email" name="email" id="input-email" autocomplete="off" class="backdrop-input" />
+						<label for="input-email" class="backdrop-label">
+							Почта
+						</label>
+						<svg class="backdrop-icon" width="18px" height="18px">
+							<use href="./images/symbol-defs.svg#icon-mail"></use>
+						</svg>
+					</div>
+					<div class="backdrop-container four">
+						<input type="text" name="comment" id="input-comment" autocomplete="off" class="backdrop-comment" />
+						<label for="input-comment" class="backdrop-label-comment">
+							Комментарий
+						</label>
+					</div>
+					<div class="backdrop-container fifth">
+						<input type="checkbox" name="agreement" id="agreement" class="backdrop-check" />
+						<label for="agreement" class="backdrop-label-check">
+							Соглашаюсь с рассылкой и принимаю
+							<a href="" class="backdrop-link">Условия договора</a>
+						</label>
+					</div>
+					<button class="backdrop-button">Отправить</button>
+				</div>
+			</form>
+		</div>
+
 		<script>
 			(() => {
 				document.querySelector(".form").addEventListener("submit", e => {
@@ -425,5 +481,7 @@
 				});
 			})();
 		</script>
+
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
